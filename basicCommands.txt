@@ -1,0 +1,10 @@
+git init
+git add <file> ->> add all files ->> git add *
+git status
+git commit
+git push
+git pull
+git clone
+touch <file>
+git config --global user.name "First Last"
+git config --global user.email "you@example.com"

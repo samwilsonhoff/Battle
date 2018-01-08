@@ -2,9 +2,12 @@
   -characters
     -generate vectors in?
   -terrain
+    -randomly generated
 -basic mechanics
   -movement
+    control [sprites?] by moving by pixel
   -collisions
+    -when pixels align
   -start/end game
 -start screen
   -local

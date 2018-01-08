@@ -1,5 +1,6 @@
 -make general concept of layout
   -characters
+    -generate vectors in?
   -terrain
 -basic mechanics
   -movement

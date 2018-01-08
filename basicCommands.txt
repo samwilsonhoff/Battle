@@ -13,3 +13,8 @@ git remote add origin https://github.com/samwilsonhoff/Battle.git
 git push -u origin master
 git branch --set-upstream-to=origin/master master
 git pull origin master --allow-unrelated-histories
+
+//to push
+git add .
+git commit -m "comment"
+git push

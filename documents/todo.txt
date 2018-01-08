@@ -1,0 +1,15 @@
+-make general concept of layout
+  -characters
+  -terrain
+-basic mechanics
+  -movement
+  -collisions
+  -start/end game
+-start screen
+  -local
+  -multi player
+  -bots
+  -settings
+-advanced mechanics
+  -falling terrain
+  -shooting

@@ -1,5 +1,6 @@
 git init
-git add <file> ->> add all files ->> git add .
+git add <file>
+get add .
 git status
 git commit -m "comment"
 git push
@@ -10,4 +11,4 @@ git config --global user.name "First Last"
 git config --global user.email "you@example.com"
 git remote add origin https://github.com/samwilsonhoff/Battle.git
 git push -u origin master
-git branch --set-upstream-to=origin/master master //to pull
+git branch --set-upstream-to=origin/master master

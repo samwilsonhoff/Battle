@@ -10,3 +10,4 @@ git config --global user.name "First Last"
 git config --global user.email "you@example.com"
 git remote add origin https://github.com/samwilsonhoff/Battle.git
 git push -u origin master
+git branch --set-upstream master origin/master //to pull

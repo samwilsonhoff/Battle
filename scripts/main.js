@@ -4,6 +4,6 @@ var width = 300;
 var height = 300;
 
 function background() {
+  c.fillStyle = "#ffffff"
   c.fillRect(0, 0, width, height);
-  c.fillStyle = "#FF0000";
 }

@@ -7,3 +7,12 @@ function background() {
   c.fillStyle = "#ffffff"
   c.fillRect(0, 0, width, height);
 }
+
+function show() {
+  //does not work yet
+  var hide = document.getElementById("canvas");
+  hide.style.display = "none";
+}
+
+var hide = document.getElementById("canvas");
+hide.style.display = "none";

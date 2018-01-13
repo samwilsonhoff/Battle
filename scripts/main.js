@@ -14,7 +14,6 @@ function background() {
 }
 
 function show() {
-  //does not work yet
   var show = document.getElementById("canvas");
   show.style.display = "initial";
 }

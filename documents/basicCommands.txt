@@ -14,6 +14,12 @@ git push -u origin master
 git branch --set-upstream-to=origin/master master
 git pull origin master --allow-unrelated-histories
 
+
+//to pull
+change directory:
+  cd <path of battle file>
+git pull
+
 //to push
 git add .
 git commit -m "comment"

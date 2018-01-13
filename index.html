@@ -2,13 +2,30 @@
 <html>
   <body>
     <head>
-      <img src="pictures/blockbattle.png" alt="oops we messed up. Relaoad page">
       <link rel="stylesheet" type="text/css" href="style.css" />
       <title>Block Battle</title>
     </head>
-      <canvas id="canvas" width="800" height="600"></canvas><br>
-      <button type="button" name="button" onclick="StartGame();">Start Game!</button><br>
-      <input type="image" src="pictures/lan.png" name="image">
+    <div class="row">
+      <div class="column" style="text-align:center;">
+        <img src="pictures/blockbattle.png" alt="oops we messed up. Relaoad page">
+        <h1>Store</h1>
+        <p>To be added!</p>
+      </div>
+      <div class="column">
+        <canvas id="canvas" width="800" height="600"></canvas><br>
+        <div class="row">
+          <div class="column1">
+            <button type="button" name="button" onclick="StartGame();">Start Game</button><br>
+          </div>
+          <div class="column1">
+            <button type="button" name="button"><a href="#"></a>Main Menu</button>
+          </div>
+          <div class="column1">
+            <button type="button" name="button"><a href="#"></a>Settings</button>
+          </div>
+        </div>
+      </div>
+      </div>
       <script type="text/javascript" src="scripts/main.js"></script>
       <script type="text/javascript" src="scripts/physics.js"></script>
   </body>

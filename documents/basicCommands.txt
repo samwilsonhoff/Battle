@@ -17,7 +17,7 @@ git pull origin master --allow-unrelated-histories
 
 //to pull
 change directory:
-  cd <path of battle file>
+  cd "<path of battle file>" REMEMBER QUOTATIONS
 git pull
 
 //to push

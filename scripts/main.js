@@ -7,6 +7,12 @@ var square = 20;
 function StartGame() {
   background();
   border();
+
+  var fCall = new Red();
+  fCall.Summon();
+  var fCall = new Green();
+  fCall.Summon();
+  
 }
 
 function background() {

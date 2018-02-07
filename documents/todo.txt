@@ -4,10 +4,15 @@
   -terrain
     -randomly generated
 -basic mechanics
-  -movement
-    -repaint each character whilst moving
+  -movement*
+    -repaint each character whilst moving*
   -collisions
     -when pixels align (x, y)
+    -collision with border (detect with (x, y))
+      -replace border tile with black
+      -place character inside border
+      -damage for touching border
+        -mainly for when border shrinks, forcing players towards each other
   -start game*
   -end game
 -start screen
@@ -17,4 +22,6 @@
   -settings
 -advanced mechanics
   -falling terrain
+    -also seen in collisions^^^
   -shooting
+    -rebounds off borders?

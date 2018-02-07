@@ -1,34 +1,17 @@
-//list of issues
-  //characater does not move
-  //both of these due to being reset to default on call
-    //this.x does not stay changed
-    //this.xspeed does not stay changed
-  //general idea
-    //when up arrrow pressed, yspeed changes to -20
-    //then this.y is added by -20
-    //the y value becomes (whatever it was + -20)
-    //this moves character up
-  //what actually happens
-    //yspeed does change to -20
-    //this.y does change by -20
-    //character moves one square up
-    //all reset back
-      //so next movement is from original spawnpoint
-//i wrote this so i don't forget, ill figure it out im sure -theo
 var canvas = document.getElementById("canvas");
 var c = canvas.getContext("2d");
 var width = 800;
 var height = 600;
 var square = 20;
-var start = true;
+
+var fourth = ((width/2)/2);
+var eighth = fourth/2;
+var redX = (width/2) - fourth - eighth;
+var redY = height/2;
+var greenX = (width/2) + fourth + eighth;
+var greenY = height/2;
 
 function Red() {
-  var fourth = ((width/2)/2);
-  var eighth = fourth/2;
-  this.startx = (width/2) - fourth - eighth;
-  this.starty = height/2;
-  this.x;
-  this.y;
   this.xspeed = 0;
   this.yspeed = 0;
 
@@ -40,33 +23,20 @@ function Red() {
 
   this.update = function() {
     c.fillStyle = "#C0C0C0";
-    c.fillRect(this.x, this.y, square, square);
+    c.fillRect(redX, redY, square, square);
 
-    this.x += this.xspeed;
-    this.y += this.yspeed;
+    redX += this.xspeed;
+    redY += this.yspeed;
     this.Summon();
   }
 
   this.Summon = function() {
     c.fillStyle = "#ff0000";
-    c.fillRect(this.x, this.y, square, square);
-  }
-
-  this.StartGame = function() {
-    c.fillStyle = "#ff0000";
-    c.fillRect(this.startx, this.starty, square, square);
-    this.x = this.startx;
-    this.y = this.starty;
+    c.fillRect(redX, redY, square, square);
   }
 
 }
 function Green() {
-  var fourth = ((width/2)/2);
-  var eighth = fourth/2;
-  this.startx = (width/2) + fourth + eighth;
-  this.starty = height/2;
-  this.x;
-  this.y;
   this.xspeed = 0;
   this.yspeed = 0;
 
@@ -78,39 +48,46 @@ function Green() {
 
   this.update = function() {
     c.fillStyle = "#C0C0C0";
-    c.fillRect(this.x, this.y, square, square);
+    c.fillRect(greenX, greenY, square, square);
 
-    this.x += this.xspeed;
-    this.y += this.yspeed;
+    greenX += this.xspeed;
+    greenY += this.yspeed;
     this.Summon();
   }
 
   this.Summon = function() {
     c.fillStyle = "#32CD32";
-    c.fillRect(this.x, this.y, square, square);
-  }
-
-  this.StartGame = function() {
-    c.fillStyle = "#32CD32";
-    c.fillRect(this.startx, this.starty, square, square);
-    this.x = this.startx;
-    this.y = this.starty;
+    c.fillRect(greenX, greenY, square, square);
   }
 }
 
 document.addEventListener('keydown', (event) => {
   const keyName = event.key;
+  const keyCode = event.keyCode;
   var r = new Red();
-  if (keyName == "ArrowUp") {
+  var g = new Green();
+  if (keyCode == "87") {
     r.dir(0, -square);
   }
-  if (keyName == "ArrowDown") {
+  if (keyCode == "83") {
     r.dir(0, square);
   }
-  if (keyName == "ArrowRight") {
+  if (keyCode == "68") {
     r.dir(square, 0);
   }
-  if (keyName == "ArrowLeft") {
+  if (keyCode == "65") {
     r.dir(-square, 0);
+  }
+  if (keyName == "ArrowUp") {
+    g.dir(0, -square);
+  }
+  if (keyName == "ArrowDown") {
+    g.dir(0, square);
+  }
+  if (keyName == "ArrowRight") {
+    g.dir(square, 0);
+  }
+  if (keyName == "ArrowLeft") {
+    g.dir(-square, 0);
   }
 });

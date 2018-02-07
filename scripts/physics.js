@@ -25,8 +25,10 @@ var start = true;
 function Red() {
   var fourth = ((width/2)/2);
   var eighth = fourth/2;
-  this.x = (width/2) - fourth - eighth;
-  this.y = height/2;
+  this.start.x = (width/2) - fourth - eighth;
+  this.start.y = height/2;
+  this.x;
+  this.y;
   this.xspeed = 0;
   this.yspeed = 0;
 
@@ -37,9 +39,8 @@ function Red() {
   }
 
   this.update = function() {
-    alert(this.yspeed);
     c.fillStyle = "#C0C0C0";
-    c.fillRect(this.x, this.y, square*1.5, square*1.5);
+    c.fillRect(this.x, this.y, square, square);
 
     this.x += this.xspeed;
     this.y += this.yspeed;
@@ -48,16 +49,24 @@ function Red() {
 
   this.Summon = function() {
     c.fillStyle = "#ff0000";
-    c.fillRect(this.x, this.y, square*1.5, square*1.5);
+    c.fillRect(this.x, this.y, square, square);
   }
 
+  this.StartGame = function() {
+    c.fillStyle = "#ff0000";
+    c.fillRect(this.start.x, this.start.y, square, square);
+    this.x = this.start.x;
+    this.y = this.start.y;
+  }
 
 }
 function Green() {
   var fourth = ((width/2)/2);
   var eighth = fourth/2;
-  this.x = (width/2) + fourth + eighth;
-  this.y = height/2;
+  this.start.x = (width/2) + fourth + eighth;
+  this.start.y = height/2;
+  this.x;
+  this.y;
   this.xspeed = 0;
   this.yspeed = 0;
 
@@ -69,7 +78,7 @@ function Green() {
 
   this.update = function() {
     c.fillStyle = "#C0C0C0";
-    c.fillRect(this.x, this.y, square*1.5, square*1.5);
+    c.fillRect(this.x, this.y, square, square);
 
     this.x += this.xspeed;
     this.y += this.yspeed;
@@ -77,8 +86,15 @@ function Green() {
   }
 
   this.Summon = function() {
-    c.fillStyle = "#00ff00";
-    c.fillRect(this.x, this.y, square*1.5, square*1.5);
+    c.fillStyle = "#ff0000";
+    c.fillRect(this.x, this.y, square, square);
+  }
+
+  this.StartGame = function() {
+    c.fillStyle = "#ff0000";
+    c.fillRect(this.start.x, this.start.y, square, square);
+    this.x = this.start.x;
+    this.y = this.start.y;
   }
 }
 

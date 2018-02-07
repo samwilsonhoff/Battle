@@ -9,10 +9,10 @@ function StartGame() {
   border();
 
   var fCall = new Red();
-  fCall.Summon();
+  fCall.StartGame();
   var fCall = new Green();
-  fCall.Summon();
-  
+  fCall.StartGame();
+
 }
 
 function background() {

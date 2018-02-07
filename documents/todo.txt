@@ -1,16 +1,17 @@
+* = finished
 -make general concept of layout
-  -characters
-    -generate vectors in?
+  -characters*
   -terrain
     -randomly generated
 -basic mechanics
   -movement
-    control [sprites?] by moving by pixel
+    -repaint each character whilst moving
   -collisions
-    -when pixels align
-  -start/end game
+    -when pixels align (x, y)
+  -start game*
+  -end game
 -start screen
-  -local
+  -local*
   -multi player
   -bots
   -settings

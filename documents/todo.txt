@@ -3,6 +3,7 @@
   -characters*
   -terrain
     -randomly generated
+    -cant run into them
 -basic mechanics
   -movement*
     -repaint each character whilst moving*
@@ -13,6 +14,7 @@
       -place character inside border
       -damage for touching border
         -mainly for when border shrinks, forcing players towards each other
+  -health bars
   -start game*
   -end game
 -start screen
@@ -21,7 +23,7 @@
   -bots
   -settings
 -advanced mechanics
-  -falling terrain
+  -border movement
     -also seen in collisions^^^
   -shooting
     -rebounds off borders?

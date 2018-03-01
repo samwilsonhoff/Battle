@@ -24,9 +24,9 @@ function border() {
   c.fillStyle = "#000000";
   for (var i = 0; i < width; i++) {
     var temp = square * i;
-    c.fillRect(temp, 0, square, square);
-    c.fillRect(0, temp, square, square);
-    c.fillRect(temp, 580, square, square);
-    c.fillRect(780, temp, square, square);
+    c.fillRect(temp, 0, square, square); //top
+    c.fillRect(0, temp, square, square); //left
+    c.fillRect(temp, 580, square, square); //bottom
+    c.fillRect(780, temp, square, square); //right
   }
 }

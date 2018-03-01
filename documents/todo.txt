@@ -25,5 +25,6 @@
 -advanced mechanics
   -border movement
     -also seen in collisions^^^
+    -repaint by shrinking by square
   -shooting
     -rebounds off borders?
